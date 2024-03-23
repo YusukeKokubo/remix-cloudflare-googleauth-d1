@@ -6,7 +6,7 @@
   "scripts": {
     "build": "remix vite:build",
     "deploy": "npm run build && wrangler pages deploy ./build/client",
-    "dev": "remix vite:dev",
+    "dev": "remix vite:dev -p 3000",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "wrangler pages dev ./build/client",
     "typecheck": "tsc",
@@ -21,7 +21,9 @@
     "isbot": "^4.1.0",
     "miniflare": "^3.20231030.4",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "remix-auth": "^3.6.0",
+    "remix-auth-google": "^2.0.0"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240320.1",
