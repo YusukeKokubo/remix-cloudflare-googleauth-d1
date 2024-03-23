@@ -1,5 +1,5 @@
 import { Authenticator } from "remix-auth"
-import { sessionStorage } from "./session.server"
+import { sessionStorage } from "~/libs/remix-auth/session.server"
 import { GoogleStrategy } from "remix-auth-google"
 import { User } from "~/types/user"
 
