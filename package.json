@@ -11,7 +11,7 @@
     "start": "wrangler pages dev ./build/client",
     "typecheck": "tsc",
     "typegen": "wrangler types",
-    "preview": "npm run build && wrangler pages dev ./build/client",
+    "preview": "npm run build && wrangler pages dev ./build/client --port 3000",
     "build-cf-types": "wrangler types"
   },
   "dependencies": {
