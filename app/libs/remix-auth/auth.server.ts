@@ -27,7 +27,7 @@ const googleStrategy = new GoogleStrategy<User>(
       email: profile.emails?.[0].value ?? "",
       image: profile.photos?.[0].value ?? "",
     }
-  }
+  },
 )
 
 const authenticator = new Authenticator<User>(sessionStorage)

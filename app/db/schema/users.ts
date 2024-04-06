@@ -22,5 +22,5 @@ export const users = sqliteTable(
   },
   (users) => ({
     emailIdx: uniqueIndex("emailIdx").on(users.email),
-  })
+  }),
 )
