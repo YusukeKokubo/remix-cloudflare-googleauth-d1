@@ -33,8 +33,6 @@
     "@remix-run/dev": "^2.8.1",
     "@types/react": "^18.2.74",
     "@types/react-dom": "^18.2.24",
-    "@typescript-eslint/eslint-plugin": "^7.5.0",
-    "@typescript-eslint/parser": "^7.5.0",
     "drizzle-kit": "^0.20.14",
     "node-fetch": "^3.3.2",
     "typescript": "^5.4.4",
