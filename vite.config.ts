@@ -4,6 +4,7 @@ import {
 } from "@remix-run/dev"
 import { defineConfig, loadEnv } from "vite"
 import tsconfigPaths from "vite-tsconfig-paths"
+import { getLoadContext } from "./load-context";
 
 // export default defineConfig(({mode} =>{
 //   return {
@@ -17,6 +18,6 @@ export default defineConfig(({ mode }) => {
     define: {
       "process.env": env,
     },
-    plugins: [remixCloudflareDevProxy(), remix(), tsconfigPaths()],
+    plugins: [remixCloudflareDevProxy(getLoadContext), remix(), tsconfigPaths()],
   }
 })

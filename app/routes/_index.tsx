@@ -1,7 +1,7 @@
 import {
-  json,
   type LoaderFunctionArgs,
   type MetaFunction,
+  json,
 } from "@remix-run/cloudflare"
 import { Form, useLoaderData } from "@remix-run/react"
 import authenticator from "~/libs/remix-auth/auth.server"
@@ -13,28 +13,14 @@ export const meta: MetaFunction = () => {
   ]
 }
 
-export async function loader({ request }: LoaderFunctionArgs) {
+export async function loader({ request, context }: LoaderFunctionArgs) {
   const user = await authenticator.isAuthenticated(request)
   return json({ user })
 }
 
 export default function Index() {
   const { user } = useLoaderData<typeof loader>()
-  if (user) {
-    return (
-      <>
-        <div>
-          hello
-          {user.name}
-          <img src={user.image} alt={user.name} />
-        </div>
-
-        <Form action="/api/auth/signout" method="post">
-          <button type="submit">サインアウト</button>
-        </Form>
-      </>
-    )
-  } else {
+  if (!user) {
     return (
       <>
         <Form action="/api/auth/signin" method="post">
@@ -43,4 +29,17 @@ export default function Index() {
       </>
     )
   }
+  return (
+    <>
+      <div>
+        hello
+        {user.name}
+        <img src={user.image} alt={user.name} />
+      </div>
+
+      <Form action="/api/auth/signout" method="post">
+        <button type="submit">サインアウト</button>
+      </Form>
+    </>
+  )
 }
