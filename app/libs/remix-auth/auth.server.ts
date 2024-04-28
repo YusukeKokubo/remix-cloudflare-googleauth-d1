@@ -23,6 +23,7 @@ const googleStrategy = new GoogleStrategy<User>(
     callbackURL: `${process.env.CLIENT_URL}/api/auth/google/callback`,
   },
   async ({ accessToken, refreshToken, profile, context, request }) => {
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
     const db = drizzle(context!.cloudflare.env.DB, { schema: { users } });
     const saved = await db.query.users.findFirst({
       where: eq(users.email, profile.emails?.[0].value),
