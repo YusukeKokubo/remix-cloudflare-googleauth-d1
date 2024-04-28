@@ -13,6 +13,7 @@ export const users = sqliteTable(
     email: text("email").notNull(),
     name: text("name"),
     image: text("image"),
+    memo: text("memo"),
     createdAt: integer("createdAt", { mode: "timestamp" })
       .default(sql`(strftime('%s', 'now'))`)
       .notNull(),
