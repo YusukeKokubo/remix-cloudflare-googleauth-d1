@@ -16,29 +16,29 @@
     "build-cf-types": "wrangler types"
   },
   "dependencies": {
-    "@remix-run/cloudflare": "^2.8.1",
-    "@remix-run/cloudflare-pages": "^2.8.1",
-    "@remix-run/react": "^2.8.1",
-    "drizzle-orm": "^0.30.8",
-    "isbot": "^5.1.4",
-    "miniflare": "^3.20240405.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "@remix-run/cloudflare": "^2.9.1",
+    "@remix-run/cloudflare-pages": "^2.9.1",
+    "@remix-run/react": "^2.9.1",
+    "drizzle-orm": "^0.30.9",
+    "isbot": "^5.1.5",
+    "miniflare": "^3.20240419.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "remix-auth": "^3.6.0",
     "remix-auth-google": "^2.0.0"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.0",
-    "@cloudflare/workers-types": "^4.20240405.0",
-    "@remix-run/dev": "^2.8.1",
-    "@types/react": "^18.2.79",
-    "@types/react-dom": "^18.2.25",
-    "drizzle-kit": "^0.20.14",
+    "@biomejs/biome": "^1.7.1",
+    "@cloudflare/workers-types": "^4.20240423.0",
+    "@remix-run/dev": "^2.9.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "drizzle-kit": "^0.20.17",
     "node-fetch": "^3.3.2",
     "typescript": "^5.4.5",
-    "vite": "^5.2.9",
+    "vite": "^5.2.10",
     "vite-tsconfig-paths": "^4.3.2",
-    "wrangler": "^3.51.2"
+    "wrangler": "^3.52.0"
   },
   "engines": {
     "node": ">=18.0.0"
